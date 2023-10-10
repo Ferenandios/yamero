@@ -1,0 +1,15 @@
+.button {
+  @apply bg-white text-black px-4 border-l-2;
+}
+.button:first-child {
+  @apply rounded-l-full
+}
+.button:last-child {
+  @apply rounded-r-full
+}
+.filter {
+  @apply flex flex-col mt-4;
+}
+.items {
+  @apply flex justify-center h-8 mt-2;
+}
