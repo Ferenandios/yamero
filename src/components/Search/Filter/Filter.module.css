@@ -13,3 +13,6 @@
 .items {
   @apply flex justify-center h-8 mt-2;
 }
+.active {
+  @apply bg-gray-200
+}
