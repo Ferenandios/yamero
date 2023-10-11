@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import styles from './Filter.module.css'
 
-const Filter: FC = (): JSX.Element => {
+const Filter: FC = (): JSX.Element => { 
   return (
     <>
       <div className={styles.filter}>
