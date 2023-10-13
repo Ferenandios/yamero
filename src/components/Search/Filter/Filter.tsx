@@ -1,26 +1,57 @@
-import { FC } from 'react'
-import styles from './Filter.module.css'
+import { FC, useState } from "react";
+import styles from "./Filter.module.css";
+import React from "react";
+import classNames from "classnames";
 
-const Filter: FC = (): JSX.Element => { 
+const buttonList = [
+  "All",
+  "Art",
+  "Biography",
+  "Computers",
+  "History",
+  "Medical",
+  "Poetry",
+];
+const buttonSortByList = ["Relevance", "Newest"];
+
+const Filter: FC = (): JSX.Element => {
+  const [activeButton, setActiveButton] = useState<string>("All");
+  const [activeSortByButton, setActiveSortByButton] =
+    useState<string>("Relevance");
+
   return (
     <>
       <div className={styles.filter}>
         <div className={styles.items}>
-          <button className={styles.button}>All</button>
-          <button className={styles.button}>Art</button>
-          <button className={styles.button}>Biography</button>
-          <button className={styles.button}>Computers</button>
-          <button className={styles.button}>History</button>
-          <button className={styles.button}>Medical</button>
-          <button className={styles.button}>Poetry</button>
+          {buttonList.map((buttonName) => (
+            <button
+              className={classNames(
+                styles.button,
+                activeButton === buttonName ? styles.active : null
+              )}
+              onClick={() => setActiveButton(buttonName)}
+            >
+              {buttonName}
+            </button>
+          ))}
         </div>
+
         <div className={styles.items}>
-          <button className={styles.button}>Relevance</button>
-          <button className={styles.button}>Newest</button>
+          {buttonSortByList.map((buttonName) => (
+            <button
+              className={classNames(
+                styles.button,
+                activeSortByButton === buttonName ? styles.active : null
+              )}
+              onClick={() => setActiveSortByButton(buttonName)}
+            >
+              {buttonName}
+            </button>
+          ))}
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Filter
+export default Filter;
