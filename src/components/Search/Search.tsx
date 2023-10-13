@@ -1,8 +1,8 @@
-import { FC } from 'react'
-import Input from './Input/Input'
-import Filter from './Filter/Filter'
-import Title from './Title/Title'
-import styles from './Search.module.css'
+import React, { FC } from "react";
+import Input from "./Input/Input";
+import Filter from "./Filter/Filter";
+import Title from "./Title/Title";
+import styles from "./Search.module.css";
 
 const Search: FC = (): JSX.Element => {
   return (
@@ -13,12 +13,12 @@ const Search: FC = (): JSX.Element => {
           <div className={styles.inner}>
             <Title />
             <Input />
-            <Filter />
+            {/* <Filter /> */}
           </div>
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

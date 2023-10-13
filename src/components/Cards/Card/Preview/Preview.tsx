@@ -6,7 +6,11 @@ const Preview: FC<PreviewProps> = ({ imageLinks }): JSX.Element => {
   return (
     <>
       <div className={styles.preview}>
-        <img src={imageLinks.thumbnail} alt="Preview" />
+        <img
+          className="max-w-[200px] max-h-[230px]"
+          src={imageLinks.thumbnail}
+          alt="Preview"
+        />
       </div>
     </>
   );

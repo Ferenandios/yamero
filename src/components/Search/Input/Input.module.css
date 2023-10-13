@@ -8,5 +8,5 @@
   @apply h-10 bg-white flex justify-center items-center text-black w-10 rounded-l-full outline-none;
 }
 .input {
-  @apply w-[500px] h-10 text-black px-1 rounded-r-full outline-none;
+  @apply w-3/4 md:w-[500px] h-10 text-black px-1 rounded-r-full outline-none;
 }
