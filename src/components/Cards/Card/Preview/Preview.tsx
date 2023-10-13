@@ -1,14 +1,15 @@
-import { FC } from 'react'
-import styles from './Preview.module.css'
+import React, { FC } from "react";
+import styles from "./Preview.module.css";
+import { type PreviewProps } from "../../../../types";
 
-const Preview: FC = (): JSX.Element => {
+const Preview: FC<PreviewProps> = ({ imageLinks }): JSX.Element => {
   return (
     <>
       <div className={styles.preview}>
-        <img src="rofl.png" alt="" />
+        <img src={imageLinks.thumbnail} alt="Preview" />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Preview
+export default Preview;
