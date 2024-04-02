@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/yamero/static/css/main.595de972.css",
+    "main.js": "/yamero/static/js/main.be64722f.js",
+    "index.html": "/yamero/index.html",
+    "main.595de972.css.map": "/yamero/static/css/main.595de972.css.map",
+    "main.be64722f.js.map": "/yamero/static/js/main.be64722f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.595de972.css",
+    "static/js/main.be64722f.js"
+  ]
+}
